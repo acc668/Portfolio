@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Ink & Aether</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<div class="site-wrapper">
+
+  <!-- Navigation -->
+    <nav>
+    <a href="index.html" class="nav-logo">Ink &amp; Aether</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- NAV BACKDROP -->
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- NAV DRAWER -->
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="drawer-section-label">Navigate</div>
+    <ul class="drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="gamedesign.html">Game Design</a></li>
+      <li><a href="coding.html">Coding</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="drawer-section-label">Search</div>
+  </div>
+    <div class="drawer-search">
+      <div class="search-input-wrap">
+        <span class="search-icon">&#x2315;</span>
+        <input class="search-input" id="search-input" type="text" placeholder="Search portfolio..." autocomplete="off">
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-crystal">
+      <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer hexagonal rings -->
+        <polygon points="250,30 450,140 450,360 250,470 50,360 50,140" stroke="#4fc3f7" stroke-width="0.5" fill="none"/>
+        <polygon points="250,60 420,157 420,343 250,440 80,343 80,157" stroke="#b39ddb" stroke-width="0.5" fill="none"/>
+        <polygon points="250,90 390,175 390,325 250,410 110,325 110,175" stroke="#80cbc4" stroke-width="0.3" fill="none"/>
+        <!-- Inner crystal facets -->
+        <line x1="250" y1="30" x2="250" y2="470" stroke="#4fc3f7" stroke-width="0.3"/>
+        <line x1="50" y1="140" x2="450" y2="360" stroke="#4fc3f7" stroke-width="0.3"/>
+        <line x1="450" y1="140" x2="50" y2="360" stroke="#4fc3f7" stroke-width="0.3"/>
+        <!-- Center diamond -->
+        <polygon points="250,180 310,250 250,320 190,250" stroke="#b39ddb" stroke-width="0.8" fill="rgba(179,157,219,0.03)"/>
+        <!-- Outer spokes -->
+        <line x1="250" y1="30"  x2="250" y2="180" stroke="#4fc3f7" stroke-width="0.4"/>
+        <line x1="450" y1="140" x2="310" y2="250" stroke="#4fc3f7" stroke-width="0.4"/>
+        <line x1="450" y1="360" x2="310" y2="250" stroke="#4fc3f7" stroke-width="0.4"/>
+        <line x1="250" y1="470" x2="250" y2="320" stroke="#4fc3f7" stroke-width="0.4"/>
+        <line x1="50"  y1="360" x2="190" y2="250" stroke="#4fc3f7" stroke-width="0.4"/>
+        <line x1="50"  y1="140" x2="190" y2="250" stroke="#4fc3f7" stroke-width="0.4"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Game Design · Collaborative Storytelling · World-Building</div>
+      <h1 class="hero-name">Alexandra Curry</h1>
+      <p class="hero-title">Amateur Game Designer & Narrative Craftsperson</p>
+      <p class="hero-desc">Weaving worlds from systems and stories — bridging game design, collaborative fiction, and the art of shared imagination.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="aether-divider"><span>◈</span></div>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="section-header reveal">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Selected <span>Work</span></h2>
+    </div>
+
+    <div class="work-grid reveal-stagger">
+
+      <div class="work-card">
+        <span class="card-tag tag-code">Game Design</span>
+        <h3 class="card-title">Project Title Here</h3>
+        <p class="card-desc">A brief description of the project — what it is, what your role was, and what makes it interesting from a design perspective.</p>
+        <div class="card-meta">Role: Lead Designer · Tools: Unity, Figma</div>
+      </div>
+
+      <div class="work-card">
+        <span class="card-tag tag-lore">World-Building</span>
+        <h3 class="card-title">Setting / World Name</h3>
+        <p class="card-desc">Description of the world you built — scope, themes, mechanical underpinnings, or the collaborative system it was designed for.</p>
+        <div class="card-meta">Collaborative World · Ongoing</div>
+      </div>
+
+      <div class="work-card">
+        <span class="card-tag tag-design">System Design</span>
+        <h3 class="card-title">Rules System / Mechanic</h3>
+        <p class="card-desc">An overview of a game mechanic, TTRPG ruleset, or interactive system you designed — its goals and how it plays.</p>
+        <div class="card-meta">TTRPG System · 2024</div>
+      </div>
+
+      <div class="work-card">
+        <span class="card-tag tag-writing">Narrative Design</span>
+        <h3 class="card-title">Story / Campaign Title</h3>
+        <p class="card-desc">A narrative project — could be a campaign, interactive story, or written piece with strong structural design behind it.</p>
+        <div class="card-meta">Solo Project · 2024</div>
+      </div>
+
+      <div class="work-card">
+        <span class="card-tag tag-collab">Collaborative RP</span>
+        <h3 class="card-title">Server / Campaign Name</h3>
+        <p class="card-desc">A roleplay collaboration — describe the server, your characters, the arc you helped shape, and your contributions.</p>
+        <div class="card-meta">Collaborative · Discord</div>
+      </div>
+
+      <div class="work-card">
+        <span class="card-tag tag-code">Code / Tool</span>
+        <h3 class="card-title">Tool or Script Name</h3>
+        <p class="card-desc">A coding project related to game design — a Discord bot, world-building generator, character sheet tool, or similar.</p>
+        <div class="card-meta">GitHub · Python / JS</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Writing Samples -->
+  <section id="writing">
+    <div class="section-header reveal">
+      <span class="section-label">Collaborative Fiction</span>
+      <h2 class="section-title">Writing <span>Samples</span></h2>
+    </div>
+
+    <div class="reveal">
+      <div class="writing-feature">
+        <div class="writing-label">Featured Excerpt · Roleplay Sample</div>
+        <h3 class="card-title" style="font-size:1.3rem; margin-bottom:0.5rem;">Scene Title or Arc Name</h3>
+        <p class="card-desc" style="margin-bottom:0;">Server Name · Channel: #channel-name · 2024</p>
+
+        <div class="writing-excerpt">
+          <em>Your character's name</em> does something evocative here —
+          the kind of writing that shows your grasp of action, atmosphere, and character voice.
+          Replace this with an actual excerpt from your roleplay that showcases your best work.
+          <br><br>
+          <em>"Dialogue goes here,"</em> she said, and the world felt a little smaller for it.
+          <br><br>
+          <em>A beat of action. A moment of tension. Something that shows craft.</em>
+        </div>
+
+        <div class="writing-chars">
+          <span class="char-badge">Characters: Morgan</span>
+          <span class="char-badge">Characters: Lyra</span>
+          <span class="char-badge">Genre: Action / Drama</span>
+          <span class="char-badge">Collab with: Partner Name</span>
+        </div>
+      </div>
+
+      <div class="writing-feature">
+        <div class="writing-label">Writing Sample · Original Fiction</div>
+        <h3 class="card-title" style="font-size:1.3rem; margin-bottom:0.5rem;">Second Sample Title</h3>
+        <p class="card-desc" style="margin-bottom:0;">Original Work · Genre · Year</p>
+
+        <div class="writing-excerpt">
+          A second writing sample — perhaps something from solo fiction, a lore document,
+          or a different collaborative voice. Show your range here: if the first excerpt
+          is action-heavy, maybe this one leans atmospheric or introspective.
+          <br><br>
+          <em>The world-building detail that makes this world feel real and lived-in.</em>
+        </div>
+
+        <div class="writing-chars">
+          <span class="char-badge">Solo Work</span>
+          <span class="char-badge">Genre: Fantasy / Lore</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">The Creator</span>
+      <h2 class="section-title">About <span>Me</span></h2>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="about-portrait">
+        <div class="portrait-frame">
+          <div class="portrait-corner tl"></div>
+          <div class="portrait-corner tr"></div>
+          <div class="portrait-corner bl"></div>
+          <div class="portrait-corner br"></div>
+          <img class="portrait-img" src="images/profile/profile.png" alt="Alexandra Curry">
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p>Alexandra Curry is a storyteller first and a designer second, though the two have never really been separate. Growing up with a head full of characters and worlds that needed somewhere to go, collaborative fiction became the natural home for both — a space where a single choice ripples outward and changes everything.</p>
+        <p>With a background in Immersive Media & Games (IMG) from Northern Arizona University, and years of collaborative roleplay shaping the way they think about narrative and player agency, they bring a writer's instinct to every design problem: who is this for, what will they feel, and what happens next? Their work spans high fantasy world-building, emotionally grounded character drama, and systems that reward the kind of small, human decisions that butterfly effects are made of.</p>
+        <p>Currently looking for opportunities in <em style="color:var(--crystal-blue)">game design, narrative design, or world-building roles</em>. Open to collaborations, freelance, and full-time positions.</p>
+        <p><em style="color:var(--crystal-blue)">If you're building something that needs a collaborator who genuinely cares about the people who'll experience it, let's talk.</em></p>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Design</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Game Design</span>
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">Narrative Design</span>
+            <span class="skill-tag">TTRPG</span>
+            <span class="skill-tag">World-Building</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">Wix</span>
+            <span class="skill-tag">Canva</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Writing & Craft</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Collaborative Fiction</span>
+            <span class="skill-tag">Character Development</span>
+            <span class="skill-tag">Lore Writing</span>
+            <span class="skill-tag">Dialogue</span>
+            <span class="skill-tag">Arc Structuring</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Technical</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">C / C++ / C#</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-section" id="contact">
+    <span class="contact-glyph">✦</span>
+    <div class="section-header" style="margin-bottom:1rem;">
+      <span class="section-label" style="display:block; text-align:center;">Let's Connect</span>
+      <h2 class="section-title" style="text-align:center;">Open to <span>Opportunities</span></h2>
+    </div>
+    <p class="contact-desc">Whether you're building something new or looking for a collaborator, I'd love to hear from you.</p>
+    <div class="contact-links">
+      <a href="/cdn-cgi/l/email-protection#cd8eb8bfbfb4e38ca1a8b5aca3a9bfac8dbdbfa2b9a2a3a0aca4a1e3aea2a0" class="btn btn-primary">Send a Message</a>
+      <a href="https://github.com/acc668" class="btn btn-ghost">GitHub</a>
+      <a href="https://www.linkedin.com/in/alexandra-curry-35530733b/" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://honestlyhadley.itch.io/" class="btn btn-ghost">itch.io</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span>◈ Ink & Aether</span>
+    <span>Crafted with intention · 2026</span>
+  </footer>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+  // Generate floating particles
+  const container = document.getElementById('particles');
+
+  for (let i = 0; i < 40; i++) 
+  {
+    const p = document.createElement('div');
+
+    p.className = 'particle';
+    p.style.left = (Math.random() * 100 + '%');
+    p.style.animationDuration = ((12 + Math.random() * 20) + 's');
+    p.style.animationDelay = ((Math.random() * 20) + 's');
+    container.appendChild(p);
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => 
+  {
+    entries.forEach(entry => 
+    {
+      if (entry.isIntersecting) 
+      {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, 
+  { 
+    threshold: 0.1, 
+    rootMargin: '0px 0px -60px 0px' 
+  });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+</script>
+
+
+<script>
+  // ── HAMBURGER ──
+  const hamburger = document.getElementById('nav-hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  const backdrop = document.getElementById('nav-backdrop');
+
+  function openDrawer() 
+  {
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    hamburger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() 
+  {
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+  backdrop.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', e => 
+  { 
+    if (e.key === 'Escape') 
+    {
+      closeDrawer(); 
+    }
+  });
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  document.querySelectorAll('.drawer-links a').forEach(a => 
+  {
+    if (a.getAttribute('href') === currentPage) 
+    {
+      a.classList.add('active');
+    }
+  });
+
+  // ── SEARCH INDEX ──
+  const searchIndex = [
+    { 
+      title: 'About Alexandra Curry', 
+      page: 'index.html', 
+      section: 'Home · About', 
+      snippet: 'Storyteller first and designer second — narrative design, world-building, collaborative fiction, NAU IMG.' 
+    },
+    
+    { 
+      title: 'Contact', 
+      page: 'index.html', 
+      section: 'Home · Contact', 
+      snippet: 'Open to opportunities in game design, narrative design, and world-building roles.' 
+    },
+
+    { 
+      title: 'Sparring Arc — Aura General', 
+      page: 'writing.html', 
+      section: 'Writing · Roleplay', 
+      snippet: 'Morgan, Lyra, Simon and Ethan in a combat exchange establishing character dynamic through movement and restraint.' 
+    },
+
+    { 
+      title: 'Haikus — Five of Them', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A set of five haikus: Spaghetti, Pepe the Frog, Pizza Rolls, Friendship, and The Three Scotsman. Sincere to chaotic.' 
+    },
+    
+    { 
+      title: 'The Wallflower', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'Free verse poem about existing on the margins — unseen, underestimated, and quietly promising to prove otherwise.' 
+    },
+
+    { 
+      title: 'April Showers', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A contrast of warmth and cold. A narrator who brings spring wherever she goes, until someone freezes her heart entirely.' 
+    },
+
+    { 
+      title: 'Mischievous Melodies', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A memory poem about recognizing Africa by Toto and sharing a quiet musical moment with a father. Nostalgic and tender.' 
+    },
+
+    { 
+      title: 'Darkness & Despair', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'Persona poem voiced by Death herself — duty without joy, labor without favor. Dark and wry.' 
+    },
+
+    { 
+      title: 'The Girl I Used to Be', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A lyric poem about outgrowing or losing a former self. Repetition and resolution.' 
+    },
+
+    { 
+      title: 'No Talking', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A poem about chosen silence — every painful day at school, every friend lost, kept locked away in the mind.' 
+    },
+
+    { 
+      title: 'Wren & Eden — Midnight Kitchen', 
+      page: 'writing.html', 
+      section: 'Writing · Roleplay', 
+      snippet: 'Wren Svendson sneaks out for a midnight snack and stumbles into a first meeting in the dark. Anxious, soft, and clumsy.' 
+    },
+
+    { 
+      title: 'Danganronpa: Killing Floor — Three Scenes', 
+      page: 'writing.html', 
+      section: 'Writing · Roleplay', 
+      snippet: 'Three excerpts: Ryota and Wren\'s first impression at Hope\'s Peak, Ambrose\'s cold calculation, and Eden\'s death — the gut-wrenching aftermath of loss in a killing game setting.' 
+    },
+
+    { 
+      title: 'The Indestructibles: Flashback', 
+      page: 'writing.html', 
+      section: 'Writing · Original Fiction', 
+      snippet: 'A council trial told through physical sensation and symbolic space. Architecture as judgment, a golden locket, cold marble, and a ruling that destroys all hope. Themes and motifs assignment.' 
+    },
+
+    { 
+      title: 'Maeve & Zeke — The Rooftop', 
+      page: 'writing.html', 
+      section: 'Writing · Original Fiction', 
+      snippet: 'A rooftop scene built on tension and restraint. Zeke finds Maeve and instead of a kiss gives her the promise of one — an almost that feels like gravity. Tension and suspense assignment.' 
+    },
+
+    { 
+      title: 'Tous — To Us', 
+      page: 'writing.html', 
+      section: 'Writing · Poetry', 
+      snippet: 'A love poem in four movements: eyes, lips, hands, and finally the person themselves — built from the outside in. Ends not with a person, but a partnership.' 
+    },
+
+    { 
+      title: 'Racial & Societal Injustices', 
+      page: 'writing.html', 
+      section: 'Writing · Academic', 
+      snippet: 'Honors political science research paper. Racial generalization post-9/11, BLM, ACAB, implicit vs. explicit bias. POLS211H, Ivy Tech University, December 2020.' 
+    },
+
+    { 
+      title: 'Generalized Anxiety Disorder', 
+      page: 'writing.html', 
+      section: 'Writing · Academic', 
+      snippet: 'Research paper examining GAD symptoms, causes, and impact across school stress, home life, and environmental stressors. Written December 2016. Sources: Harvard Health, Forbes, WebMD.' 
+    },
+
+    { 
+      title: "Dandelion's Garden — Six Death Scenes", 
+      page: 'writing.html', 
+      section: 'Writing · Roleplay', 
+      snippet: "Six alternate-timeline death scenes from a Percy Jackson collaborative setting. Dandelion, Cato, Josirus, Ilya, Noah, Axelle, Eli. Sacrifice, possession, betrayal, grief, loss, and rage." 
+    },
+
+    { 
+      title: 'After I Fell', 
+      page: 'writing.html', 
+      section: 'Writing · Original Fiction', 
+      snippet: 'First-person diary prose spanning 2016 to 2024. A narrator raised to manipulate, a stranger in a coffee shop named Dynim, and a tribute written at a hospital bedside. NYC setting.' 
+    },
+
+    { 
+      title: 'Avalon — Chronicles of Saffael', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Assamite vampire, age 115, looks 25. Youngest of a Florentine mafia family. Sired by the man she loved, killed him, became a mercenary. Necromancy, knives, unarmed combat. Spells: Harm, Maze.' 
+    },
+
+    { 
+      title: 'Viola Cecelia', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Musical Alter, age 17, born October 21st. Test tube baby. Optional mute, trauma-based. Guitar is her lifeline. Demisexual biromantic. Anxiety and slight PTSD. DNA: 03461920.' 
+    },
+
+    { 
+      title: 'Violet Octavia Wilmington', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Cleric, Otter Clan, North Dynasty, Agrion 2021. Age 18, green eyes, auburn hair. Chaotic Neutral. Gifted psychology student obsessed with cold cases. Raised by therapists. Alias: Vi.' 
+    },
+
+    { 
+      title: 'Marlowe Elowen Kingsleigh', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Artist and storyteller, age 23, Sheng Xiao. Sheep/Stag Clan. Sectoral heterochromia. Slight stutter under stress. Multi-medium artist, guitarist, street dancer. Birthday: October 21st.' 
+    },
+
+    { 
+      title: 'Lore Entry', 
+      page: 'writing.html', 
+      section: 'Writing · Lore', 
+      snippet: 'In-world documentation — history, myth, or faction lore from a collaborative setting.' 
+    },
+
+    { 
+      title: 'Solo Fiction Sample', 
+      page: 'writing.html', 
+      section: 'Writing · Original Fiction', 
+      snippet: 'Standalone fiction showing solo narrative voice.' 
+    },
+
+    { 
+      title: 'Avalon Granifeth', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Witch of Lylebor. Moon Elf, non-binary, age 26. Runaway noble turned Divination witch. Chaotic Neutral. Dragonsmouth. Tarot, palmistry, crystals, tea leaf reading.' 
+    },
+
+    { 
+      title: 'Alesandrea Amberlyn', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Cinderblade. Commander, Gilded Guard, Caelora. Fire magic, copper-red hair, arranged marriage, tactical brilliance. Has never fought for her own happiness.' 
+    },
+
+    { 
+      title: "Vex'aria Thornwick", 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: "The Everhungered. High Priestess of the Maw Below. Gluttony faction leader, Tier IV Sovereign mage. Platinum hair, dark crown, consumption magic, and a hunger that can never be filled." 
+    },
+
+    { 
+      title: 'Aaravi Mallaya', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Engineering expert from Agrion. Horse Clan. Systematic, hard-headed, understands machines better than people. Agrion 2021 TTRPG.' 
+    },
+
+    { 
+      title: 'Wren Svendson', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Ultimate Astronomer. Norwegian, 19, blue hair, yellow eyes. Perceptive introvert in a killing game setting.' 
+    },
+
+    { 
+      title: 'Eleonore Emric', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Twin (Tilly). 16, Ragako Wall Rose, Attack on Titan. Impulsive fighter, weapon-crafter, insomniac. Moon tattoo. Alias: Tilly.' 
+    },
+
+    { 
+      title: 'Carsten Emric', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Twin (Rune). 16, Ragako Wall Rose, Attack on Titan. Bookish strategist, narcoleptic, moderate anxiety. Sun tattoo. Alias: Rune.' 
+    },
+
+    { 
+      title: 'Lysandra Veilheart', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Pearl of Seraphyne. Lust Faction Leader, age 24. Supreme Courtesan, Tier IV Allurecraft magic. Seraphyne dominion. Secretly searching for lost love Elena. Master of the Velvet Spire.' 
+    },
+
+    { 
+      title: 'Morpheus Stillwater', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Eternal Dreamer. Sloth Faction Leader, age 25, he/they. Grand Archivist of Dreams, Sombermoor. Entropy magic Tier IV. Dream-walking prophet who moves through life at the pace of time itself.' 
+    },
+
+    { 
+      title: 'Yuna Koehito', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Genin, Koehito Clan, age 19. Naruto: Grievance. Empathetic, adaptable, charmingly naive. Fire and Yin natures. Genjutsu and Bukijutsu specialist. Always late, always honest about it.' 
+    },
+
+    { 
+      title: 'Haiven Astigonia', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Chaotic Neutral, age 21, Iondir. Rezana trusted contact. Platinum hair, milky white eyes. Twin of Jinx Astigonia (MIA). Pet: Skoot the Lindara. Escaped poverty by robbing an important person.' 
+    },
+    
+    { 
+      title: 'Kaelen Vireth', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Quiet Flame. Wrath Faction Leader, age 47, Kael\'Vorr. Infernal Surge magic Tier IV. A disciplined warden who trains successors to surpass him rather than serve him.' 
+    },
+    
+    { 
+      title: 'Lucien Virellion', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Grand Exchequer of Dravhara. Greed and Pride, age 25. Merchant Prince, Hoard Magic Tier IV. The most trusted liar in the Velvet Circle. Obsessed with legacy, contracts, and never sharing his father\'s fate.' 
+    },
+    
+    { 
+      title: 'Jinx Prescott', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Ultimate Unlucky Student. Silver hair, blue eyes, American, 21. High intelligence, zero leadership. Closest to Mikan and Nagito.' 
+    },
+    
+    { 
+      title: 'Maeve Donshatt', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Cleric, human/plant mutant from Quesh. Can speak to the dead, tends gardens, prays every night. Chaotic Good. Orphanage of Marayaz.' 
+    },
+    
+    { 
+      title: 'Nona Emerson', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Ultimate Social Media Influencer. Korean, 18, screen name YouMeShe. Friendliness 10, lying 9, fighting 2. Closest to Junko and Sonia.' 
+    },
+    
+    { 
+      title: 'Aaravi Noskra', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Tiefling tinkerer, age 21, Neutral Good, Broktoph. Stubborn and straight-forward engineer with periwinkle eyes and dark blue hair. Pet: Doogan the Telare. Artificer and Tinkerer Kit.' 
+    },
+    
+    { 
+      title: 'Katerina Petrov', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Kat. EAT student, weapon (Morning Star Flail), age 17, Chaotic Good. Deep indigo hair, light violet eyes. Competitive, hot-headed. Soul Eater setting. Preferred partner: Rexes.' 
+    },
+    
+    { 
+      title: 'Estelar Vulmer', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Knight. Female, age 35. Red hair, topaz eyes, face mask. Requip/spatial mage — stores armors in pocket dimensions. Realistic, rigid. Madrielith setting.' 
+    },
+    
+    { 
+      title: 'Tarron Arbelladon', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Lightning God Slayer. Male, age 25. Stark white hair, green eyes, snake bites. Produces black lightning. Laid-back perfectionist. Madrielith setting.' 
+    },
+    
+    { 
+      title: 'Sylmae Caira', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Sylmae Satan. Female, age 37. Black hair, dark red eyes, gray skin, large black horns. Satan Soul take-over magic. Protective and nurturing. Madrielith setting.' 
+    },
+    
+    { 
+      title: 'Paeris Trisleth', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Material Man. Male, age 42. Deep purple hair, purple-gray eyes. Arc of Embodiment — materializes anything imagined. Charming, absent-minded, manipulative. Madrielith setting.' 
+    },
+    
+    { 
+      title: 'Arryn Prestoris', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Soul Snatcher. Female, age 39. Short sky blue hair, purple eyes, dimples. Human Possession and Figure Eyes magic. Quick-thinking and blunt. Madrielith setting.' 
+    },
+
+    { 
+      title: 'Verona Bilen', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Tube Tousler. Female, age 42. Hispanic, long dark brown hair. Binding Magic — conjures magical tubes. Traditional, empathetic, self-critical. Madrielith setting.' 
+    },
+    
+    { 
+      title: 'Zandro Leonelis', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: "Coffee Grinder. Male, age 23. Green hair, amber eyes. Amaterasu holder magic — hand patterns. Guild: The Jaded Dragons. Weapon: coffee mug. Weakness: breaks coffee mugs." 
+    },
+    
+    { 
+      title: 'Ofelia Erren', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Blonde Bandit. Female, age 24. Long blonde hair, blue eyes. Bullet Magic — finger guns that fire magic bullets. Airheaded but occasionally philosophical. Catchphrase: bang bang.' 
+    },
+    
+    { 
+      title: 'Rydel Montagor', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Lightning. Male, age 24. White hair, heterochromatic eyes (gold and blue). Lightning Magic. Guild: The Sunstriders. Flower tattoo over heart. Weakness: water. Loves animals.' 
+    },
+    
+    { 
+      title: 'Aiden Venali', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Flare. Male, age 19. Blonde hair, blue eyes, tattoos. Purple Flare magic — purple fire unaffected by wind or water. Guild: Lost Legacy. Selfless and loyal.' 
+    },
+    
+    { 
+      title: 'Amisra Grimm', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Rule Maker. Female, age 31. Light green hair, blue eyes, aventurine necklace. Rules of the Area — negates all spatial magic. Guild: The Sunstriders. Loves cats and lo-fi.' 
+    },
+    
+    { 
+      title: 'Orrian Solto', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: "The Flattener. Male, age 34. Blonde hair, brown eyes, black gloves and vest. Flattening Magic. Guild: Trident's Keep. Power-hungry, OCD, anger issues. Hates red cream soda." 
+    },
+    
+    { 
+      title: 'Liluth Leomys', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: "The Destroyer. Female, age 26. Long dark brown hair, blue eyes. Ars Magia — can destroy a country; costs the user's life. Guild: Lost Legacy. Keeps bees. Shows no emotions." 
+    },
+    
+    { 
+      title: 'Erendriel Torvaris', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Lightning Dragon Slayer. Male, age 28. Long silver hair, silver eyes, pointy ears. Incorporates lightning into his body. Guild: The Jaded Dragons. Lawful evil peacemaker. Weakness: earth, stone.' 
+    },
+    
+    { 
+      title: 'Ambrose Easton', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Ultimate Tattoo Artist / Ultimate Mortician. Male (trans), age 22, British, Capricorn. White-blonde hair, blue-green eyes, snake bites. Lies 10/10, intelligence 9/10. Aromantic bisexual. Killing game setting.' 
+    },
+    
+    { 
+      title: 'Yuna Uchiha', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Yuna Momoko Uchiha. Princess/Angel of Death. Genin, Uchiha Clan, age 14. Black wavy bob, freckles, Sharingan. Scythe weapon. Stealth specialist. Naruto Densetsu. Birthday: October 21st.' 
+    },
+    
+    { 
+      title: 'Rayna Fyodor Yankov', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Ray / Fyo. Female, age 20, two-thirds human one-third Eldari. Born on planet Bretheda. Engineer, metalworks, shapeshifting. Robotic creatures, taser whip, laser pistol. Barcode tattoo. Cyberpunk sci-fi setting.' 
+    },
+    
+    { 
+      title: 'Elanore Nightstar', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Singer in training, Kaethan Clan, Arphaen, age 21. Demisexual bicurious. Orphaned at sixteen. Plays Lyre. Sews. Hopeless romantic, artistic, humble. Goal: become a skilled performer.' 
+    },
+    
+    { 
+      title: 'Cornaith Farsys', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Water Viper. Male, age 34. Cerulean hair, blood orange eyes. Water Magic, trident. Guild: Trident\u2019s Keep. Calm but terrifying when angered. Huge romantic. Married to Rina. Madrielith.' 
+    },
+    
+    { 
+      title: 'Rina Ennelis-Farsys', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Gardenia. Female, age 32. Chestnut brown hair, emerald eyes. White Magic healer, magic rod. Guild: Trident\u2019s Keep. Grammar stickler. Dog: Kobe. Married to Cornaith. Madrielith.' 
+    },
+    
+    { 
+      title: 'Sillavana Renestrae', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The All-Seeing Iris. Female, age 35. Shoulder-length blonde hair, brown eyes. Heaven\u2019s Eye magic \u2014 sees through solid objects and over long distances. Guild: The Sunstriders. Likes scotch and classical music.' 
+    },
+    
+    { 
+      title: 'Tinlef Trazumin', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Starfight. Male, age 23. Golden blonde hair, dark amber eyes. Light Magic, orb. Guild: Lost Legacy. Super happy and excitable. Afraid of the dark. Weakness: dark days. Madrielith.' 
+    },
+    
+    { 
+      title: 'Valindra Arthion', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Sky Dragon Slayer. Female, age 26. Dark brown hair, deep green eyes, monk style. Guild: The Jaded Dragons. Strict, precise. Loves order. Hates chaos and idiots. Weakness: underwater. Madrielith.' 
+    },
+    
+    { 
+      title: 'Arasnae Amnestria', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Aeroblow. Female, age 30. Dark blue hair, small blue wings by ears, emo chains, large blue trench coat. Smoke Magic holder. Guild: Demon\u2019s Repent. Slightly masochistic. Weapon: cigarettes and lighter. Madrielith.' 
+    },
+    
+    { 
+      title: 'Zakkarium Fel Trendon', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Cannibal. Male, age 19. Black sclera, red pupils, shaggy blonde hair, double fangs, forked tongue. Beast Soul magic. Guild: Genocide Paradox. Edgy emo who loves strawberry ice cream and rom-coms. Madrielith.' 
+    },
+    
+    { 
+      title: 'Axil Virion', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Transmorphia. Genderfluid, age 28. Short deep purple hair, deep gray eyes, suit and tie. Copy Magic \u2014 transforms flawlessly into others. Guild: Devoted Oblivion. Cold but secretly cares about guild. Madrielith.' 
+    },
+    
+    { 
+      title: 'Nym Ettrion', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Illusionist. Male, age 40, mute. Black hair with blue tips. Card Magic holder. Guild: Celtic Cross. Anxious, shy, never wanted to be a dark guild leader. Loves big sweaters and coffee. Madrielith.' 
+    },
+    
+    { 
+      title: 'Tsarra Orican', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Puppeteer. Female, age 22. Reddish-pink space buns, hazel eyes. Doll Attack magic \u2014 animates any object except humans. Guild: Abandonment Agony. Abandonment issues. Go with the flow. Madrielith.' 
+    },
+    
+    { 
+      title: 'Rhys Cailen', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Voodoo. Male, age 37. Shaggy red hair, blood red eyes. Voodoo doll magic (Ushi no Koko Mairi). Guild: Blood Lust. Bloodthirsty, yandere, diagnosed insanity. Weakness: seeing blood causes breakdown. Madrielith.' 
+    },
+    
+    { 
+      title: 'Ara Adren', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Dazzler. Female, age 48 (do not ask). Blonde hair, blue eyes, always in frilly dresses with excessive glitter. Mirror Magic. Guild: Pure Privilege. Spoiled, pampered, everything about her. Madrielith.' 
+    },
+    
+    { 
+      title: 'Theodore Zinna', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'Homie G(ramps). Male, age 69. Super tan, big bushy eyebrows, big red robe, cool aviators. Dancer Magic \u2014 buffs allies and debuffs enemies through dance. Guild: Enigma\u2019s of Shame. Will break a hip break dancing. Madrielith.' 
+    },
+    
+    { title: 'Jamie Xilvan', 
+    page: 'writing.html', 
+    section: 'Writing · Character Profiles', 
+    snippet: 'Caesar. Male, age 20. Brown hair, topaz eyes, spartan armor, lots of swords. Sword Magic holder. Guild: Spartan\u2019s Point. For Sparta type guy. Hates cats. Close range specialist. Madrielith.' 
+    },
+    
+    { title: 'Remi Rendahl', 
+    page: 'writing.html', 
+    section: 'Writing · Character Profiles', 
+    snippet: 'Mcree. Genderfluid, age 21. Dark green curly hair, olive skin. Thought Projection magic. Guild: High Noobs. Gamer, artist, perfectionist. Will yell it\u2019s high noobs. Dislikes needles. Madrielith.' 
+    },
+    
+    { 
+      title: 'Renki', 
+      page: 'writing.html', 
+      section: 'Writing · Character Profiles', 
+      snippet: 'The Seductress / Succubus. Female, age 32. Blonde curly hair, ruby red eyes, 5 foot 11. Influence magic \u2014 hypnotizes targets into attraction. Guild: Seducers of Seduction. Confident, blunt, intelligent, manipulative. Madrielith.' 
+    },
+    
+    { 
+      title: 'Live RP Feed', 
+      page: 'writing.html', 
+      section: 'Writing · Live RP Feed', 
+      snippet: 'Real-time Discord roleplay messages streamed live from the RP channel. Updated instantly as messages are sent.' 
+    },
+    
+    { 
+      title: 'Alura', 
+      page: 'art.html', 
+      section: 'Art · Character', 
+      snippet: 'Character design with full color palette reference. Original character from my novel.' 
+    },
+    
+    { 
+      title: 'Kiran', 
+      page: 'art.html', 
+      section: 'Art · Character', 
+      snippet: 'Full-body character design, casual outfit, dark hair, green eyes. Original character from my novel.' 
+    },
+    
+    { 
+      title: 'Demon Slayer OC — Commission', 
+      page: 'art.html', 
+      section: 'Art · Character', 
+      snippet: 'Demon Slayer style reimagining of my cousin, drawn as a commission for my mom.' 
+    },
+    
+    { 
+      title: 'Character Art', 
+      page: 'art.html', 
+      section: 'Art · Character', 
+      snippet: 'Character portraits and illustrations.' 
+    },
+    
+    { 
+      title: 'Concept Art', 
+      page: 'art.html', 
+      section: 'Art · Concept', 
+      snippet: 'Environment and concept pieces for collaborative worlds and settings.' 
+    },
+    
+    { 
+      title: 'Game Design Project', 
+      page: 'gamedesign.html', 
+      section: 'Game Design · Digital', 
+      snippet: 'Digital game or design project — narrative design, prototyping, Unity.' 
+    },
+    
+    { 
+      title: 'Echoes of the Arcane Vault', 
+      page: 'gamedesign.html', 
+      section: 'Game Design · TTRPG Campaign', 
+      snippet: 'A four-act D\&D campaign about magic vs. non-magic balance, rival factions, ancient mysteries, and a world-altering final decision.' 
+    },
+    
+    { 
+      title: 'TTRPG System', 
+      page: 'gamedesign.html', 
+      section: 'Game Design · TTRPG', 
+      snippet: 'Homebrew tabletop system or campaign setting — rules, world-building, playtested.' 
+    },
+    
+    { 
+      title: 'Discord Bot', 
+      page: 'coding.html', 
+      section: 'Coding · Bot', 
+      snippet: 'Discord bot or tool — roleplay utility, dice roller, character sheet manager. Python.' 
+    },
+    
+    { 
+      title: 'Web Project', 
+      page: 'coding.html', 
+      section: 'Coding · Web', 
+      snippet: 'Website, web app, or interactive tool. HTML, CSS, JavaScript.' 
+    },
+
+    { 
+      title: 'Game Dev Project', 
+      page: 'coding.html', 
+      section: 'Coding · Game', 
+      snippet: 'Game prototype or jam entry. C#, Unity.' 
+    },
+  ];
+
+  function highlight(text, query) 
+  {
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    return text.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
+  }
+
+  function runSearch(query) 
+  {
+    const resultsEl = document.getElementById('search-results');
+
+    if (!query || query.length < 2) 
+    { 
+      resultsEl.innerHTML = ''; 
+      return; 
+    }
+
+    const q = query.toLowerCase();
+    const matches = searchIndex.filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.snippet.toLowerCase().includes(q) ||
+      item.section.toLowerCase().includes(q));
+
+    if (matches.length === 0) 
+    {
+      resultsEl.innerHTML = '<div class="search-empty">No results found</div>';
+      return;
+    }
+
+    resultsEl.innerHTML = matches.map(item =>
+      '<a class="search-result-item" href="' + item.page + '">' +
+      '<div class="search-result-title">' + highlight(item.title, query) + '</div>' +
+      '<div class="search-result-meta">' + item.section + '</div>' +
+      '<div class="search-result-snippet">' + highlight(item.snippet, query) + '</div>' +
+      '</a>').join('');
+  }
+
+  document.getElementById('search-input').addEventListener('input', e => runSearch(e.target.value.trim()));
+</script>
+</body>
+</html>
